@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.__pyc
+.env
+uploaded_papers/
+chroma_db/
+.vscode/
