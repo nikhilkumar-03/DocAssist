@@ -10,6 +10,8 @@ from modules.rag_chain import answer_question
 from modules.citation import format_citation
 from modules.summarizer import summarize_paper
 
+os.makedirs("uploaded_papers", exist_ok=True)
+
 st.set_page_config(page_title="DocAssist", layout="centered")
 st.title("DocAssist")
 st.write("Upload a research paper and ask questions about it.")
@@ -18,6 +20,7 @@ if "store" not in st.session_state:
     st.session_state.store = None
 if "chunks" not in st.session_state:
     st.session_state.chunks = None
+    
 
 uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
 
